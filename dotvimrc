@@ -24,6 +24,12 @@ set number "this is to show the line number
 
 set guifont=Courier\ New\ 11 " set the default font
 
+set autochdir
+
+set hlsearch	"use * and # to highlight and search the symbol under cursor
+
+set laststatus=2
+
 " set guioptions-=m "remove menual bar
 
 " set guioptions-=T "remove toolbar
@@ -49,19 +55,25 @@ if has("gui_running")
 else
   " This is console Vim.
   if exists("+lines")
-    set lines=40
+    set lines=30
   endif
   if exists("+columns")
     set columns=100
   endif
 endif
 
+" circle buffer setting
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+
+
 " 2. Winmanager configurations
 let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|TagList'
 nmap wm :WMToggle<cr>
 
 " 3. Ctags configurations    
-set tags=/home/rui/s2e/s2e/tags " set the project tags
+set tags=/home/rui/s2e/tags " set the project tags
+set tags=/home/rui/github/mit6.828/lab1/tags
 
 " 4. Taglist configurations 
 let Tlist_Show_One_File=1
@@ -69,7 +81,8 @@ let Tlist_Exit_OnlyWindow=1
 
 " 5. Cscope configurations
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
-:cs add /home/rui/s2e/s2e/cscope.out /home/rui/s2e/s2e
+":cs add /home/rui/s2e/cscope.out /home/rui/s2e
+:cs add /home/rui/github/mit6.828/lab1/cscope.out /home/rui/github/mit6.828/lab1
 
 " 6. LaTex configurations
 "REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
