@@ -73,7 +73,9 @@ nmap wm :WMToggle<cr>
 
 " 3. Ctags configurations    
 set tags=/home/rui/s2e/tags " set the project tags
-set tags=/home/rui/github/mit6.828/lab1/tags
+set tags=/home/rui/github/jos-course/lab/tags
+set tags=/home/rui/MemoryAnalysis/source/UM_REWARDS/source/tools/REWARDS_online/tags
+set tags=/home/rui/s2e-source/tags
 
 " 4. Taglist configurations 
 let Tlist_Show_One_File=1
@@ -81,8 +83,9 @@ let Tlist_Exit_OnlyWindow=1
 
 " 5. Cscope configurations
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
-":cs add /home/rui/s2e/cscope.out /home/rui/s2e
-:cs add /home/rui/github/mit6.828/lab1/cscope.out /home/rui/github/mit6.828/lab1
+:cs add /home/rui/github/s2e/cscope.out /home/rui/github/s2e
+:cs add /home/rui/github/jos-course/lab/cscope.out /home/rui/github/jos-course/lab
+:cs add /home/rui/MemoryAnalysis/source/UM_REWARDS/source/tools/REWARDS_online/cscope.out /home/rui/MemoryAnalysis/source/UM_REWARDS/source/tools/REWARDS_online/
 
 " 6. LaTex configurations
 "REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
